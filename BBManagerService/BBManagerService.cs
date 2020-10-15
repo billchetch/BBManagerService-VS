@@ -52,8 +52,9 @@ namespace BBManagerService
         {
             base.AddCommandHelp();
 
-
+            AddCommandHelp(ManagerMessageSchema.COMMAND_LIST_SERVICES, "lists services");
         }
+
 
         public override void HandleClientError(Connection cnn, Exception e)
         {
@@ -64,7 +65,8 @@ namespace BBManagerService
         {
             switch (command)
             {
-                case "status":
+                case ManagerMessageSchema.COMMAND_LIST_SERVICES:
+                    
                     break;
                     
             }
